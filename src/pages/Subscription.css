@@ -1,0 +1,17 @@
+.subscriptionContainer{
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+}
+.subCardContainer{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 2rem 3rem;
+    gap: 1rem;
+}
+.subcard{
+    border: 1px solid rgba(0, 0, 0, 0.413);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+}
