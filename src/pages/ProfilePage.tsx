@@ -5,17 +5,29 @@ type Props = {
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
 };
 
+type Subs = {
+  name: string;
+  price: number;
+  id: number;
+  booked: boolean;
+};
+
 export function ProfilePage({user,setUser}:Props){
   const [workoutsDone,setWorkoutsDone]= useState<Workout[]>([])
+  const [subs,setSubs]= useState<Subs>({}as Subs)
 
   useEffect(()=>{
     fetch("http://localhost:3456/workoutsDone")
     .then(res=>res.json())
     .then(resp=>setWorkoutsDone(resp))
   },[])
+  useEffect(()=>{
+    fetch("http://localhost:3456/subscriptionDone")
+    .then(res=>res.json())
+    .then(resp=>setSubs(resp))
+  },[])
 
 
-console.log(user?.workouts)
     return (
       <div className="profileContainer">
         <div className="profileNameImg">
@@ -46,11 +58,11 @@ console.log(user?.workouts)
                   .then((userData) => setUser(userData));
               }}
             >
-              <input type="text" name="email" id="" placeholder="Email" />
+              <input type="text" name="email" id="1" placeholder="Email" />
               <input
                 type="password"
                 name="password"
-                id=""
+                id="2"
                 placeholder="Password"
               />
               <button className="joinNow">Update</button>
@@ -59,6 +71,9 @@ console.log(user?.workouts)
         </div>
 
         <div className="workoutsDone">
+          <div className="subdetail">
+            <h3>Your gym subscription : {subs.name}</h3>
+          </div>
           {workoutsDone == null ? (
             <p>No workouts done</p>
           ) : (
@@ -67,7 +82,7 @@ console.log(user?.workouts)
                 <strong>Your workouts</strong>
               </h3>
               {workoutsDone.map((workout) => (
-                <li>
+                <li key={workout.id}>
                   <h4>{workout.name}</h4>
                   <p>{workout.timeAmount}</p>
                   <p>{workout.whenWasCompleted}</p>

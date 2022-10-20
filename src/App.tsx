@@ -20,6 +20,7 @@ import { WorkoutTest } from "./pages/WorkoutTest";
 import { Trainers } from "./pages/Trainers";
 import { Workouts } from "./pages/Workouts";
 import { DetailedWorkout } from "./pages/DetailedWorkout";
+import { DetailedSubscription } from "./pages/DetailedSubscription";
 
 export type Workout ={
   id:number,
@@ -105,6 +106,7 @@ function App() {
         <Route path={"/trainers"} element={<Trainers />} />
         <Route path={"/workouts"} element={<Workouts workouts={workouts}/>} />
         <Route path={"/workouts/:id"} element={<DetailedWorkout user={user}/>} />
+        <Route path={"/subscription/:id"} element={<DetailedSubscription />} />
       </Routes>
     </div>
   );
