@@ -44,7 +44,7 @@ export function ProfilePage({user,setUser}:Props){
               className="upd"
               onSubmit={(e) => {
                 e.preventDefault();
-                fetch(`http://localhost:3456/users/${user.id}`, {
+                fetch(`http://localhost:3456/usersnew/${user?.id}`, {
                   method: "PATCH",
                   headers: {
                     "Content-type": "application/json",

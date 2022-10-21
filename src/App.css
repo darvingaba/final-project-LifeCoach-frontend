@@ -69,10 +69,13 @@ a{
   place-items: center;
   padding: 6rem 6rem;
 }
+.numberOfMinutes{
+  width: 100px;
+  padding: 1rem;
+}
 .introLeftTitle {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   padding-left: 7rem;
   gap: 1rem;
@@ -306,13 +309,18 @@ p {
   align-items: center;
   justify-content: center;
   place-items: center;
+  padding: 1rem;
   gap: 4rem;
   /* background-color: #fd3d0d64; */
-  height: 360px;
-  width: 360px;
+  height: 480px;
+  width:480px;
   border-radius: 5%;
   margin-top: 40px;
   transition: all 0.2s;
+}
+
+.workoutDtt{
+  display: grid;
 }
 .workOutContainer.green {
   background-color: #00a97f30;
@@ -427,6 +435,14 @@ p {
 .error {
   color: red;
 }
+.weightBlogImg{
+  width: 800px;
+}
+.yogaContainer{
+  display: grid;
+  place-items: center;
+  padding: 4rem 10rem;
+}
 .signupIn{
   background-color: #fd3d0d;
   padding: 6px 8px;
@@ -438,4 +454,10 @@ p {
 /* footer */
 .footerBg {
   background-color: rgb(34, 31, 28);
+}
+
+.weightsContainer{
+  display: grid;
+  place-items: center;
+  padding: 4rem 10rem;
 }

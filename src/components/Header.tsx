@@ -16,14 +16,15 @@ export function Header({user,signOut}:Props){
           <Link to={"/home"}>
             <p>Home</p>
           </Link>
-          <p>About Us</p>
           <Link to={"/workouts"}>
             <p>Workouts</p>
           </Link>
           <Link to={"/subscription"}>
             <p>Pricing</p>
           </Link>
-          <p>Contact</p>
+          <Link to={"/profile"}>
+            <p>Profile</p>
+          </Link>
           <button onClick={signOut} className="joinNow">
             {user ? "LOGOUT" : "JOIN NOW"}
           </button>

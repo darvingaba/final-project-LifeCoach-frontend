@@ -4,7 +4,6 @@ import "./components/Cardio.css";
 import "./pages/Subscription.css";
 import "./pages/Profile.css";
 import "./pages/Workouts.css";
-import "./pages/Trainers.css";
 import { Header } from "./components/Header";
 import { LandingPage } from "./pages/LandingPage";
 import { Workout } from "./pages/Workout";
@@ -17,7 +16,6 @@ import { Yoga } from "./components/Yoga";
 import { ProfilePage } from "./pages/ProfilePage";
 import { Subscription } from "./pages/Subscription";
 import { WorkoutTest } from "./pages/WorkoutTest";
-import { Trainers } from "./pages/Trainers";
 import { Workouts } from "./pages/Workouts";
 import { DetailedWorkout } from "./pages/DetailedWorkout";
 import { DetailedSubscription } from "./pages/DetailedSubscription";
@@ -103,7 +101,6 @@ function App() {
         <Route path={"/profile"} element={<ProfilePage user={user} setUser={setUser}/>} />
         <Route path={"/subscription"} element={<Subscription />} />
         <Route path={"/workoutTest"} element={<WorkoutTest />} />
-        <Route path={"/trainers"} element={<Trainers />} />
         <Route path={"/workouts"} element={<Workouts workouts={workouts}/>} />
         <Route path={"/workouts/:id"} element={<DetailedWorkout user={user}/>} />
         <Route path={"/subscription/:id"} element={<DetailedSubscription />} />

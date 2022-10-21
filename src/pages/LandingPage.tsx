@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Blog } from "../components/Blog";
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
@@ -57,13 +58,15 @@ export function LandingPage() {
               and research. What you need is what we offer, so sign up today to
               get started on your fitness journey!
             </p>
-            <button className="btn joinNow">Explore More</button>
+            <Link to={"/subscription"}>
+              <button className="btn joinNow">Explore More</button>
+            </Link>
           </div>
         </div>
 
         <div className="workoutsCards">
           <p className="section-subtitle">Workouts</p>
-          <h2 className="pAccTag" >Our Detailed Workouts</h2>
+          <h2 className="pAccTag">Our Detailed Workouts</h2>
           <WorkoutCard />
         </div>
 

@@ -30,7 +30,12 @@ export function Blog() {
               This can be intimidating, especially for first-timers.
             </p>
 
-            <button>Read More</button>
+            <a
+              href="https://www.gyms4you.com/en/the-best-tips-for-going-to-the-gym-for-the-first-time/"
+              target="_blank"
+            >
+              <button>Read More</button>
+            </a>
           </div>
         </div>
 
@@ -51,7 +56,12 @@ export function Blog() {
                 four types of exercise—endurance, strength, balance, and
                 flexibility.
               </p>
-              <button>Read More</button>
+              <a
+                href="https://www.healthline.com/health/fitness-exercise-eating-healthy"
+                target="_blank"
+              >
+                <button>Read More</button>
+              </a>
             </div>
           </div>
         </div>
@@ -67,13 +77,18 @@ export function Blog() {
             <div className="down">
               <h3 className="blogTitle">Why good sleep is important</h3>
               <p>
-                ood sleep improves your brain performance, mood, and health. Not
-                getting enough quality sleep regularly raises the risk of many
-                diseases and disorders. These range from heart disease and
+                Good sleep improves your brain performance, mood, and health.
+                Not getting enough quality sleep regularly raises the risk of
+                many diseases and disorders. These range from heart disease and
                 stroke to obesity and dementia. There's more to good sleep than
                 just the hours spent in bed
               </p>
-              <button>Read More</button>
+              <a
+                href="https://newsinhealth.nih.gov/2021/04/good-sleep-good-health#:~:text=Good%20sleep%20improves%20your%20brain,spent%20in%20bed%2C%20says%20Dr."
+                target="_blank"
+              >
+                <button>Read More</button>
+              </a>
             </div>
           </div>
         </div>

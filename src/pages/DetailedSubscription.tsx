@@ -11,11 +11,11 @@ export function DetailedSubscription(){
     const  [detailSub,setDetailSub]=useState<Subs>({}as Subs)
     const params = useParams()
 
-    useEffect(()=>{
-        fetch(`http://localhost:3456/subscriptions/${params.id}`)
-          .then((resp) => resp.json())
-          .then((data) => setDetailSub(data));
-    },[])
+    useEffect(() => {
+      fetch(`http://localhost:3456/subscriptions/${params.id}`)
+        .then((resp) => resp.json())
+        .then((data) => setDetailSub(data));
+    }, [detailSub]);
 
     function updateSub() {
       fetch(`http://localhost:3456/subscriptions/${params.id}`, {
@@ -52,7 +52,7 @@ export function DetailedSubscription(){
                 updateSub()
                }}
               className="joinNow">Subscribe</button>
-              {detailSub.booked?<p className="green">Subscription sucsessfull</p>:""}
+              {detailSub.booked?<p className="greenInfo">Purchase sucsessfull</p>:""}
             </div>
          </div>
     </div>

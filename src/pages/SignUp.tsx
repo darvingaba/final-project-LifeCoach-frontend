@@ -38,7 +38,7 @@ export function SignUp({ user, setUser }: Props) {
                 } else {
                   setUser(userData.user);
                   localStorage.token = userData.token;
-                  navigate("/signin");
+                  navigate("/home");
                 }
               });
           }}

@@ -43,8 +43,6 @@ export function Subscription(){
             </div>
           ))}
         </div>
-        <p>Or</p>
-        <Link to={"/trainers"}>Pick a trainer</Link>
       </div>
     );
 }

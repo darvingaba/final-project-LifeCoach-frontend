@@ -22,7 +22,7 @@ export function DetailedWorkout({user}:Props) {
   console.log(workout);
 
   if (numberOfTicks == -1) {
-    setNumberOfTicks(10);
+    setNumberOfTicks(60);
     setNumberOfSets((set) => set - 1);
   }
 
@@ -35,8 +35,8 @@ export function DetailedWorkout({user}:Props) {
       };
   }, [numberOfTicks]);
 
-  var audio = new Audio("./src/audio/beep.mp3");
-  var audio2 = new Audio("./src/audio/3beep.mp3");
+  const audio = new Audio("./src/audio/beep.mp3");
+  const audio2 = new Audio("./src/audio/beep.mp3");
 
   function restart() {
     setNumberOfTicks(60);
@@ -48,6 +48,7 @@ export function DetailedWorkout({user}:Props) {
   }
 
   function updateWorkout(){
+    audio.play();
     fetch(`http://localhost:3456/workout/${params.id}`, {
       method: "PATCH",
       headers: {
@@ -60,7 +61,7 @@ export function DetailedWorkout({user}:Props) {
     });
   }
 
-  if (numberOfTicks === 3) {
+  if (numberOfTicks === 4) {
     audio2.play();
   }
 
@@ -73,10 +74,13 @@ export function DetailedWorkout({user}:Props) {
           numberOfTicks > 10 ? "workOutContainer green" : "workOutContainer red"
         }
       >
-        <h2>{numberOfTicks}</h2>
+        <h1>{numberOfTicks}</h1>
         {isRestTime ? <h1>Rest</h1> : <h1>Work</h1>}
-        {numberOfTicks == 0 && sets == 0 ? <p>Finished</p> : ""}
-        {`number of sets ${sets}`}
+        <div className="workoutDtt">
+          <p>{workout.name}</p>
+          {numberOfTicks == 0 && sets == 0 ? <p>Finished</p> : ""}
+          {`number of sets : ${sets}`}
+        </div>
         <div className="btnContainer">
           <button
             className="workoutBtn"
@@ -89,8 +93,7 @@ export function DetailedWorkout({user}:Props) {
               if (numberOfTicks === -1 && sets == 1) clearInterval(intId);
               setIntId(intID);
               setTimeHandle(intID);
-              updateWorkout()
-              audio.play();
+              updateWorkout();
             }}
           >
             Start

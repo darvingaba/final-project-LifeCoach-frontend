@@ -19,18 +19,17 @@ function Footer() {
           <div className="col">
             <h4>Stuff</h4>
             <ul className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
             </ul>
           </div>
           {/* Column3 */}
           <div className="col">
-            <h4>WELL ANOTHER COLUMN</h4>
+            <h4>Contact</h4>
             <ul className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+              <li>Email</li>
+              <li>342-420-6969 Moscow, Russia 123 Streeet South North</li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Workout() {
-  const [time, setTime] = useState(150);
+  const [time, setTime] = useState(Number);
   const [timeHandle, setTimeHandle] = useState(Number);
 
   const seconds = time % 60;
@@ -62,6 +62,14 @@ export function Workout() {
             Pause
           </button>
         </div>
+        <form onSubmit={e=>{
+          e.preventDefault()
+          setTime(e.target.numberOfMinutes.value*60);
+        }}
+           className="input">
+          <input className="numberOfMinutes" type="number" name="numberOfMinutes" />
+          <button className="joinNow" placeholder="Workout time">Set Time</button>
+        </form>
       </div>
     </div>
   );
