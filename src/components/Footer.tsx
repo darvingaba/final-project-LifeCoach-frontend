@@ -17,7 +17,7 @@ function Footer() {
           </div>
           {/* Column2 */}
           <div className="col">
-            <h4>Stuff</h4>
+            <h4>Social Media</h4>
             <ul className="list-unstyled">
               <li>Facebook</li>
               <li>Instagram</li>

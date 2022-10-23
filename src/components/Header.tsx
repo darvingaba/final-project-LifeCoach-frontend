@@ -1,11 +1,12 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { User } from "../App";
 type Props={
   user:User | null
   signOut:()=> void
 }
 export function Header({user,signOut}:Props){
+  const navigate = useNavigate()
     return (
       <nav className={window.scrollY > 100 ? "nav active" : "nav"}>
         <div className="header__title">
@@ -25,8 +26,8 @@ export function Header({user,signOut}:Props){
           <Link to={"/profile"}>
             <p>Profile</p>
           </Link>
-          <button onClick={signOut} className="joinNow">
-            {user ? "LOGOUT" : "JOIN NOW"}
+          <button onClick={()=>navigate("/signin")} className="joinNow">
+            JOIN NOW
           </button>
         </div>
       </nav>

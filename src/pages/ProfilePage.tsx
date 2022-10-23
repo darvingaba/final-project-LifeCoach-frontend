@@ -3,6 +3,7 @@ import { User, Workout } from "../App"
 type Props = {
   user: User | null;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
+  signOut(): void
 };
 
 type Subs = {
@@ -12,7 +13,7 @@ type Subs = {
   booked: boolean;
 };
 
-export function ProfilePage({user,setUser}:Props){
+export function ProfilePage({user,setUser,signOut}:Props){
   const [workoutsDone,setWorkoutsDone]= useState<Workout[]>([])
   const [subs,setSubs]= useState<Subs>({}as Subs)
 
@@ -71,6 +72,9 @@ export function ProfilePage({user,setUser}:Props){
         </div>
 
         <div className="workoutsDone">
+          <button className="logoutBtn" onClick={signOut}>
+            Logout
+          </button>
           <div className="subdetail">
             <h3>Your gym subscription : {subs.name}</h3>
           </div>

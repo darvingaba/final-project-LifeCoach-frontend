@@ -98,7 +98,7 @@ function App() {
         <Route path={"/cardio"} element={<Cardio />} />
         <Route path={"/weights"} element={<Weights />} />
         <Route path={"/yoga"} element={<Yoga />} />
-        <Route path={"/profile"} element={<ProfilePage user={user} setUser={setUser}/>} />
+        <Route path={"/profile"} element={<ProfilePage user={user} setUser={setUser} signOut={signOut}/>} />
         <Route path={"/subscription"} element={<Subscription />} />
         <Route path={"/workoutTest"} element={<WorkoutTest />} />
         <Route path={"/workouts"} element={<Workouts workouts={workouts}/>} />

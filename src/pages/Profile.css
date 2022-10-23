@@ -7,6 +7,15 @@
     padding: 4rem 10rem;
     
 }
+.logoutBtn{
+  background-color: #fd3d0d;
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%, 1);
+  width: 160px;
+}
 .profileNameImg{
     width: 500px;
     height: 500px;
@@ -26,11 +35,13 @@
     color: black;
     display: grid;
     gap: 1rem;
+    place-items: center;
 }
 .workoutsDone li{
     list-style: none;
     display: grid;
     border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+    
 }
 .upd{
     display: grid;
